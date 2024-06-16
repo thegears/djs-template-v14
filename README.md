@@ -31,11 +31,11 @@ bun start
 ```ts
 import type { Interaction } from '../../typings'
 
-/*
- *new ButtonBuilder()
-	.setCustomId(`[example]{thegears}`)
-	.setStyle(ButtonStyle.Secondary)
-	.setLabel('Example')
+/**
+    new ButtonBuilder()
+	    .setCustomId(`[example]{thegears}`)
+	    .setStyle(ButtonStyle.Secondary)
+	    .setLabel('Example')
  */
 
 
@@ -55,6 +55,13 @@ export default button;
 #### Without params
 ```ts
 import type { Interaction } from '../../typings'
+
+/**
+    new ButtonBuilder()
+	    .setCustomId(`example`)
+	    .setStyle(ButtonStyle.Secondary)
+	    .setLabel('Example')
+ */
 
 const button: Interaction = {
 	customId: 'example',
