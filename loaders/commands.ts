@@ -35,8 +35,9 @@ const commands: LoaderFunction = async function({ client }) {
 		if (!messageCommand) {
 			const messageCommandAlias = messageAliases.get(message.content.split(' ')[0].replace(config.prefix, ''));
 			if (messageCommandAlias) messageCommand = messageCommands.get(messageCommandAlias);
+
+			if (!messageCommand) return;
 		}
-		if (!messageCommand) return;
 
 		if (messageCommand.withPrefix && !message.content.startsWith(config.prefix)) return;
 		if (!messageCommand.withPrefix && message.content.startsWith(config.prefix)) return;
